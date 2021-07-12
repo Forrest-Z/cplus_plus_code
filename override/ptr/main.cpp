@@ -1,6 +1,9 @@
-#include<iostream>
-#include<vector>
-#include<memory>
+#include <iostream>
+#include <vector>
+#include <memory>
+
+
+
 class X {
 public:
     int x,y,z;
@@ -11,7 +14,7 @@ public:
 
 class XX : public X {
 public:
-    virtual void f() override {
+    virtual void f() override{  //这里的override是显式替换掉父类中的虚函数，实际上即使没有override，也会替换的。
         std::cout << "XX here\n";
     }
 };

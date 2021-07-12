@@ -1,16 +1,10 @@
-/* C++11 C++ style cast tests
- written by Jared Bruni
- http://objective-c.info
- 
-*/
 
-
-#include<iostream>
-#include<string>
-#include<fstream>
-#include<cstring>
-#include<exception>
-#include<typeinfo>
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <cstring>
+#include <exception>
+#include <typeinfo>
 
 
 class Modify {
@@ -26,6 +20,8 @@ public:
 protected:
     char *temp;
 };
+
+
 
 class ModifyPrint : public Modify {
 public:
@@ -51,6 +47,11 @@ struct Values {
     }
 };
 
+/*
+dynamic_cast用来处理一种“安全向下转换”，当我们将父类指针指向一个new出来的子类A对象时，如果该父类有多个不同子类（class A，class B,），那么可以
+使用dynamic_cast将该指针类型安全转换为A*，如果使用强转操作符或者下面介绍的static_cast，那么将其转换为B*理论上也是可以的，但是使用上就会有
+错误：比如，类A有的成员函数，类B没有。
+*/
 void castTest(Modify &m) {
     try {
         ModifyPrint &p = dynamic_cast<ModifyPrint&>(m);
@@ -63,7 +64,31 @@ void castTest(Modify &m) {
     }
 }
 
+/*reinterpret_cast是特意用于底层的强制转型，导致实现依赖（就是说，不可移植）的结果，例如，将一个
+指针转型为一个整数。这样的强制类型在底层代码以外应该极为罕见。操作结果只是简单的从
+一个指针到别的指针的值的二进制拷贝。在类型之间指向的内容不做任何类型的检查和转换。
+*/
+
+
 int main(int argc, char **argv) {
+
+
+    const int &a = 12;
+    const_cast<int&>(a) = 1;
+    std::cout<<"a="<<a<<std::endl;
+
+
+    const int b = 12;
+    const_cast<int&>(b) = 1;
+    std::cout<<"a="<<b<<std::endl;
+
+
+    const int* c = new int;
+    *(const_cast<int *>(c)) = 1;
+    int* mm = const_cast<int *>(c);
+    *mm = 34;
+    std::cout<<"mm="<<*mm<<std::endl;
+
     
     const char *text = new char [6];
 

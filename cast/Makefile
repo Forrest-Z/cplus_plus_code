@@ -1,9 +1,9 @@
 CXX=c++
 FLAGS= -std=c++11   -O2
 
-all: cast-test
+all: casttest
 
-cast-test: casttest.cc
-	$(CXX) $(FLAGS) casttest.cc -o cast-test 
+casttest: casttest.cc
+	$(CXX) $(FLAGS) casttest.cc -o casttest 
 clean:
-	rm -f cast-test
+	rm -f casttest

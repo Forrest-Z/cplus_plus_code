@@ -1,5 +1,3 @@
-//
-//  Created by Jared Bruni on 7/12/13.
 
 
 #include<iostream>
@@ -20,6 +18,10 @@ public:
     }
     
 };
+
+
+
+
 
 class cyObject {
 
@@ -51,10 +53,15 @@ public:
 };
 
 
+
+
 template<typename T1, typename T2>
 auto Return_Color(T1 t1, T2 t2) -> decltype(t2+t1) {
     return t2+t1;
 }
+
+
+
 
 std::ostream &operator<<(std::ostream &out, cyObject::Color c) {
     switch(c) {
@@ -70,6 +77,8 @@ std::ostream &operator<<(std::ostream &out, cyObject::Color c) {
     }
     return out;
 }
+
+
 
 int main(int argc, char **argv) {
     

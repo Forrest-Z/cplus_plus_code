@@ -1,10 +1,3 @@
-/*
-
-  friend test
- written by Jared Bruni
- http://lostsidedead.com
-
-*/
 
 #include<iostream>
 #include<string>
@@ -12,6 +5,7 @@
 
 
 class Database;
+
 
 class User {
     friend Database; // friend of class Database
@@ -22,6 +16,7 @@ public:
     }
     friend std::ostream &operator<<(std::ostream &out, const User &u);
 };
+
 
 class Database {
 public:
@@ -39,6 +34,8 @@ public:
 protected:
     std::vector<User> users;
 };
+
+
         
         
 std::ostream &operator<<(std::ostream &out, const User &u) {
@@ -46,6 +43,9 @@ std::ostream &operator<<(std::ostream &out, const User &u) {
     // can access private members
     return out;
 }
+
+
+
 
 
 int main(int argc, char **argv) {

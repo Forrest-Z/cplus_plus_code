@@ -25,16 +25,27 @@
 // a example struct to read/write in binary mode
 typedef struct writeStruct {
     int x,y,z;
-    char value[256];
+    char value[256000];
     writeStruct() = default;
     writeStruct(int cx, int cy, int cz, const char *cvalue) {
         x = cx, y = cy, z = cz;
-        strncpy(value, cvalue, 255);
+        strncpy(value, cvalue, 255000);
     }
 } theStruct;
 
+
+
 int main(int argc, char **argv) {
-    
+
+    char data[1024*1024*2];
+    std::ifstream in_file;
+    in_file.open(argv[1]);
+    in_file>>data;
+    std::cout<<data<<std::endl;
+    in_file.close();
+
+
+
     // write to binary file
     if(argc == 3 && std::string(argv[1]) == "-o") {
     

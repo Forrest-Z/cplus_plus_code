@@ -1,7 +1,7 @@
-#include<iostream>
-#include<fstream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 
 std::string addQuotes(const std::string &text) {
     std::string temp;
@@ -27,6 +27,8 @@ void output_file(std::vector<std::string> &v, std::ostream &out_file) {
     }
     out_file << " 0 }; \n\n";
 }
+
+
 
 int main(int argc, char **argv) {
     

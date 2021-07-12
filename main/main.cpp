@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #define OBJECT_MAIN(X) int main(int argc, char **argv) { return X::main(argc, argv); }
 
 class Object {

@@ -1,12 +1,4 @@
-//  Created by Jared Bruni on 7/13/13.
-// Idea from C++ Programming Language
-// Create a function that is called when it leaves scope
-
-// main function asks for a string and if it contains "test"
-// if it does it does something
-// otherwise it throws a exception
-
-#include<iostream>
+#include  <iostream>
 
 
 template<typename F>
