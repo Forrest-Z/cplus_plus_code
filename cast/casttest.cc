@@ -69,10 +69,16 @@ void castTest(Modify &m) {
 一个指针到别的指针的值的二进制拷贝。在类型之间指向的内容不做任何类型的检查和转换。
 */
 
+void func(std::string &str){
+    std::cout<<str<<std::endl;
+}
+
+
 
 int main(int argc, char **argv) {
-
-
+    const std::string nn="sfsfsfs";
+    func(const_cast<std::string&>(nn));
+/////////////////////////////////////////
     const int &a = 12;
     const_cast<int&>(a) = 1;
     std::cout<<"a="<<a<<std::endl;
