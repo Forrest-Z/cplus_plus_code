@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/public/Project/cplus_plus_code/002_apollo/006_gtest/src/example.cpp
+example.h
+/home/public/Project/cplus_plus_code/002_apollo/006_gtest/src/example.h
+
+/home/public/Project/cplus_plus_code/002_apollo/006_gtest/src/example.h
+

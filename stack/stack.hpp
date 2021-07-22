@@ -1,13 +1,14 @@
-// trying to write something to practice
 #ifndef __HPP_HPP__
 #define __HPP_HPP__
 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 class ErrorUnder{};
 class ErrorOver{};
 class ErrorEmpty{};
+
+
 
 template<typename T>
 class Stack {
@@ -25,6 +26,7 @@ protected:
     size_t index;
 };
 
+
 template<typename T>
 Stack<T>::Stack(int Size) {
     type = new T[Size+1];
@@ -32,11 +34,13 @@ Stack<T>::Stack(int Size) {
     index = 0;
 }
 
+
 template<typename T>
 Stack<T>::~Stack() {
     delete [] type;
     type = nullptr;
 }
+
 
 template<typename T>
 void Stack<T>::push(const T &t) {
@@ -45,6 +49,7 @@ void Stack<T>::push(const T &t) {
     else
         throw ErrorOver();
 }
+
 
 template<typename T>
 T Stack<T>::pop() {
@@ -74,3 +79,5 @@ void Stack<T>::printItems() const {
 }
 
 #endif
+
+

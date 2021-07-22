@@ -1,0 +1,7 @@
+add_test( example.add /home/public/Project/cplus_plus_code/002_apollo/006_gtest/build/bin/unit_tests [==[--gtest_filter=example.add]==] --gtest_also_run_disabled_tests)
+set_tests_properties( example.add PROPERTIES WORKING_DIRECTORY /home/public/Project/cplus_plus_code/002_apollo/006_gtest/build/test LABELS unit)
+add_test( example.add2 /home/public/Project/cplus_plus_code/002_apollo/006_gtest/build/bin/unit_tests [==[--gtest_filter=example.add2]==] --gtest_also_run_disabled_tests)
+set_tests_properties( example.add2 PROPERTIES WORKING_DIRECTORY /home/public/Project/cplus_plus_code/002_apollo/006_gtest/build/test LABELS unit)
+add_test( example.subtract /home/public/Project/cplus_plus_code/002_apollo/006_gtest/build/bin/unit_tests [==[--gtest_filter=example.subtract]==] --gtest_also_run_disabled_tests)
+set_tests_properties( example.subtract PROPERTIES WORKING_DIRECTORY /home/public/Project/cplus_plus_code/002_apollo/006_gtest/build/test LABELS unit)
+set( unit_tests_TESTS example.add example.add2 example.subtract)
