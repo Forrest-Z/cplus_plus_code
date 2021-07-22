@@ -23,6 +23,8 @@ namespace driver {
 
 
 int main(int argc, char **argv) {
+
+    std::cout<<"sizeof(long)="<<sizeof(long)<<std::endl;
    timeval p;
    gettimeofday(&p, NULL);
    p.tv_sec = p.tv_sec - 60 *500000;

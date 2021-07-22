@@ -16,10 +16,11 @@ template <class... Args>
 */
 
 
-#include<iostream>
-#include<string>
-#include<vector>
-#include<cctype>
+#include <iostream>
+#include <string>
+#include <string.h>
+#include <vector>
+#include <cctype>
 
 class UserInfo {
 public:
@@ -62,11 +63,75 @@ std::ostream &operator<<(std::ostream &out, UserInfo &user) {
     return out;
 }
 
+///////////////////////////////////////////////////////////////////////////////////
+/* emplace操作是C++11新特性，新引入的的三个成员emlace_front、empace 和 emplace_back,这些操作构造而不是拷贝元素到容
+器中，这些操作分别对应push_front、insert 和push_back，允许我们将元素放在容器头部、一个指定的位置和容器尾部。
+两者的区别:当调用insert时，我们将元素类型的对象传递给insert，元素的对象被拷贝到容器中，而当我们使用emplace时，我
+们将参数传递元素类型的构造函，emplace使用这些参数在容器管理的内存空间中直接构造元素。
+*/
 
+class Mystring{
+public:
+  Mystring(const char* str){
+    if(str==nullptr){
+      m_data = new char[1];
+      *m_data = '\0';
+    }else{
+      int len = strlen(str);
+      m_data = new char[len+1];
+      strcpy(m_data, str);
+    }
+    
+    std::cout<<"construct:"<<m_data<<std::endl;
+  }
+
+  Mystring(const Mystring& other){
+    int length = strlen(other.m_data);
+    m_data = new char[length+1];
+    strcpy(m_data, other.m_data);
+    std::cout<<"copy construct:"<<m_data<<std::endl;
+  }
+
+  Mystring& operator=(const Mystring& other){
+    if(this==&other){
+      return *this;
+    }
+    if(m_data!=nullptr){
+      delete[] m_data;
+    }
+    int length = strlen(other.m_data);
+    m_data = new char[length+1];
+    strcpy(m_data, other.m_data);
+    std::cout<<"assign operator:"<<m_data<<std::endl;
+    return *this;
+  }
+
+  ~Mystring(){
+    std::cout<<"deconstruct:"<<m_data<<std::endl;
+    delete[] m_data;
+  }
+
+
+private:
+  char *m_data;
+};
+//////////////////////////////////////////////////////////////////////////////////
 
 
 int main(int argc, char **argv) {
-    
+  {
+    std::vector<Mystring> vstr;
+    vstr.reserve(100);
+    vstr.push_back(Mystring("123456"));   
+  } 
+
+  {
+    std::vector<Mystring> vstr2;
+    vstr2.reserve(100);
+    vstr2.emplace_back("7890");
+  }
+
+/*
     std::vector<UserInfo> v;
 
     // build UserInfo from arguments supplied to this member function
@@ -91,6 +156,6 @@ int main(int argc, char **argv) {
     for(auto &i : v) {
         std::cout << i << "\n";
     }
-    
+*/    
     return 0;
 }

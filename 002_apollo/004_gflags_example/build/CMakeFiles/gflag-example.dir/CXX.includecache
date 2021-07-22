@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/public/Project/cplus_plus_code/002_apollo/004_gflags_example/gflag-example.cxx
+iostream
+-
+gflags/gflags.h
+-
+gflags/gflags_completions.h
+-
+

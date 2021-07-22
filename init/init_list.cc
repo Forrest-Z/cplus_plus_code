@@ -1,10 +1,10 @@
-/* Wrapper using Initializer List */
 
-#include<iostream>
-#include<vector>
-#include<string>
-#include<initializer_list>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <initializer_list>
+#include <algorithm>
+
 
 template<typename T>
 class VectorWrapper {

@@ -1,14 +1,10 @@
-/* unordered_map hash example
- 
- written by Jared Bruni
- http://objective-c.info
- 
-*/
 
 
-#include<iostream>
-#include<unordered_map>
-#include<string>
+#include <iostream>
+#include <unordered_map>
+#include <string>
+
+
 
 class UserName {
 public:
@@ -21,12 +17,16 @@ public:
     std::string my_username, my_email;
 };
 
+
+
 class UserName_Hash {
 public:
     size_t operator()(const UserName &u) const {
         return std::hash<std::string>()(u.user()) ^ std::hash<std::string>()(u.email());
     }
 };
+
+
 
 class UserName_Compare {
 public:
@@ -36,19 +36,25 @@ public:
     }
 };
 
+
+
 std::istream &operator>>(std::istream &in, UserName &u) {
     in >> u.my_username >> u.my_email;
     return in;
 }
+
+
 
 std::ostream &operator<<(std::ostream &out, const UserName &u) {
     out << u.user() << ":" << u.email();
     return out;
 }
 
+
+
 int main(int argc, char **argv) {
     
-    std::unordered_map<UserName,std::string, UserName_Hash, UserName_Compare> users;
+    std::unordered_map<UserName, std::string, UserName_Hash, UserName_Compare> users;
     while(1) {
         std::cout << "Enter phone number (quit to exit):";
         std::string input;
@@ -68,3 +74,6 @@ int main(int argc, char **argv) {
     
     return 0;
 }
+
+
+

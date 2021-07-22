@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
     std::cout<<data<<std::endl;
     in_file.close();
 
-
+/*
 
     // write to binary file
     if(argc == 3 && std::string(argv[1]) == "-o") {
@@ -90,7 +90,7 @@ int main(int argc, char **argv) {
     }
     
     std::cout << "Enter " << argv[0] << "\n -o to output file\n -r to read file.\n";
-    
+*/    
     return 0;
 }
 

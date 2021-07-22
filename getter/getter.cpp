@@ -1,6 +1,6 @@
-#include<iostream>
-#include<string>
-#include<utility>
+#include <iostream>
+#include <string>
+#include <utility>
 
 class User {
 public:
@@ -23,9 +23,13 @@ protected:
     
 };
 
+
+
 User getUser() {
     return User("value");
 }
+
+
 
 int main() {
     std::cout << "Enter name: ";

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/public/Project/cplus_plus_code/002_apollo/005_protobuf/main.cpp
+iostream
+-
+proto/message.pb.h
+/home/public/Project/cplus_plus_code/002_apollo/005_protobuf/proto/message.pb.h
+
+proto/message.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_table_driven.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+
