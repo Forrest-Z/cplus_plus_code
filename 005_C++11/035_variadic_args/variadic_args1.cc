@@ -1,15 +1,10 @@
-/*
- Variadic template printf
- written by Jared Bruni
- http://lostsidedead.com
-*/
 
-#include<iostream>
+#include <iostream>
 
 namespace mx {
     
-    void printf(const char *s) {
-        if(s == nullptr) return;
+void printf(const char *s) {
+	if(s == nullptr) return;
         while(*s) {
             std::cout << *s++;
         }
@@ -39,3 +34,6 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+
+
+

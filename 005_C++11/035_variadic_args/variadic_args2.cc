@@ -1,11 +1,6 @@
-/* Variadic template 
- written by Jared Bruni
- http://lostsidedead.com
- */
 
-
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 
 class Point { public: int x, y; };

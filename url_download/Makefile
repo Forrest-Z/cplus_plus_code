@@ -1,5 +1,5 @@
-CXX=clang++-5.0
-CXXFLAGS=-std=c++17
+CXX=g++
+CXXFLAGS=-std=c++11
 LDFLAGS=
 CPP_FILES := $(wildcard *.cpp)
 OBJ_FILES := $(addprefix ,$(notdir $(CPP_FILES:.cpp=.o)))

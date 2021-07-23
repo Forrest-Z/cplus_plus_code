@@ -1,13 +1,10 @@
-CXX=g++
+#C++17,g++ version >=7.0,ubuntu 18.04
+
 CXX_FLAGS= -std=c++17
 
-CPP_FILES := $(wildcard *.cpp)
-EXE_FILES := $(addprefix ,$(notdir $(CPP_FILES:.cpp=.prog)))
+all: any
 
-%.prog: %.cpp
-	$(CXX) $(CXX_FLAGS) -o $@ $<
-
-all: $(EXE_FILES)
-
+any : any.cpp
+	$(CXX) -Wall $(CXX_FLAGS) any.cpp -o any
 clean:
-	rm -f *.prog
+	rm -f any

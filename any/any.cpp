@@ -1,8 +1,6 @@
-// Cannot compile this myself as the version of the Standard Library it not up to date
-// will revisit this when I do.
 
-#include<iostream>
-#include<any>
+#include <iostream>
+#include <any>
 
 int main() {
     std::any value = 10;
