@@ -1,10 +1,6 @@
-/*
- written by Jared Bruni
- http://lostsidedead.com
-*/
 
-#include<iostream>
-#include<chrono>
+#include <iostream>
+#include <chrono>
 
 
 class ScopedTime {

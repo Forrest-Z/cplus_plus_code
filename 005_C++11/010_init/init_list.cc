@@ -23,7 +23,17 @@ protected:
 };
 
 
+int func(std::initializer_list<int> il){
+//   std::vector<int> a;
+   for(auto& i:il)
+//        a.push_back(i);
+    std::cout<<"i="<<i<<std::endl;
+   return 0;
+}
+
+
 int main(int argc, char **argv) {
+    func({1,2,3});    
 
     VectorWrapper<std::string> wrap({"test ", "one", "two", "three"});
     for_each(wrap.cont().begin(), wrap.cont().end(), [](std::string s) {
