@@ -1,10 +1,7 @@
-/* Concept from "C++ Templates the Complete Guide: Second Edition
-   Chapter 6
- */
 
 
-#include<iostream>
-#include<utility>
+#include <iostream>
+#include <utility>
 
 class TypeValue {};
 
@@ -25,6 +22,8 @@ void pass(T&& value) {
     type(std::forward<T>(value));
 }
 
+
+
 int main() {
     TypeValue t1;
     const TypeValue t2;
@@ -33,3 +32,4 @@ int main() {
     pass(std::move(t1));// calls &&
     return 0;
 }
+

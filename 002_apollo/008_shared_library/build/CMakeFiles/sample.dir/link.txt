@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libsample.so -o lib/libsample.so CMakeFiles/sample.dir/sample.cc.o 

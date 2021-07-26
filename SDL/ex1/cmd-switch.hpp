@@ -6,10 +6,10 @@
 
 #ifndef __CMDSWITCH_HPP__
 #define __CMDSWITCH_HPP__
-#include<iostream>
-#include<string>
-#include<vector>
-#include<ctype.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <ctype.h>
 
 namespace cmd {
 

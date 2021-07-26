@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/shared_lib.dir/main.cc.o CMakeFiles/shared_lib.dir/shared_library.cc.o  -o bin/shared_lib  -ldl 

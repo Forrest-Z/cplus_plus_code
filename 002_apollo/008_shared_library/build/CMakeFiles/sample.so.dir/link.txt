@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libsample.so.a  CMakeFiles/sample.so.dir/sample.cc.o
+/usr/bin/ranlib lib/libsample.so.a

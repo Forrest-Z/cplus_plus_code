@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/protobuf_file.dir/main.cc.o CMakeFiles/protobuf_file.dir/file.cc.o  -o bin/protobuf_file  -Wl,-rpath,/usr/local/lib /usr/local/lib/libprotobuf.so -lpthread 

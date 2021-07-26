@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/public/Project/cplus_plus_code/002_apollo/008_shared_library/exceptions.h
+stdexcept
+-
+string
+-
+
+/home/public/Project/cplus_plus_code/002_apollo/008_shared_library/main.cc
+iostream
+-
+shared_library.h
+/home/public/Project/cplus_plus_code/002_apollo/008_shared_library/shared_library.h
+exceptions.h
+/home/public/Project/cplus_plus_code/002_apollo/008_shared_library/exceptions.h
+memory
+-
+
+/home/public/Project/cplus_plus_code/002_apollo/008_shared_library/shared_library.h
+mutex
+-
+string
+-
+exceptions.h
+/home/public/Project/cplus_plus_code/002_apollo/008_shared_library/exceptions.h
+

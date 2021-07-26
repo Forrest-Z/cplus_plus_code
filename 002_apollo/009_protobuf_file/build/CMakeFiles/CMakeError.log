@@ -1,0 +1,65 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1b09e/fast && /usr/bin/make  -f CMakeFiles/cmTC_1b09e.dir/build.make CMakeFiles/cmTC_1b09e.dir/build
+make[1]: Entering directory '/home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1b09e.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -std=c++11 -o CMakeFiles/cmTC_1b09e.dir/src.cxx.o -c /home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1b09e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b09e.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_1b09e.dir/src.cxx.o  -o cmTC_1b09e 
+CMakeFiles/cmTC_1b09e.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3c): undefined reference to `pthread_create'
+src.cxx:(.text+0x48): undefined reference to `pthread_detach'
+src.cxx:(.text+0x54): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x65): undefined reference to `pthread_join'
+src.cxx:(.text+0x79): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1b09e.dir/build.make:106: recipe for target 'cmTC_1b09e' failed
+make[1]: *** [cmTC_1b09e] Error 1
+make[1]: Leaving directory '/home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_1b09e/fast' failed
+make: *** [cmTC_1b09e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5238e/fast && /usr/bin/make  -f CMakeFiles/cmTC_5238e.dir/build.make CMakeFiles/cmTC_5238e.dir/build
+make[1]: Entering directory '/home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5238e.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=c++11 -o CMakeFiles/cmTC_5238e.dir/CheckFunctionExists.cxx.o -c /home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_5238e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5238e.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5238e.dir/CheckFunctionExists.cxx.o  -o cmTC_5238e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5238e.dir/build.make:106: recipe for target 'cmTC_5238e' failed
+make[1]: *** [cmTC_5238e] Error 1
+make[1]: Leaving directory '/home/public/Project/cplus_plus_code/002_apollo/009_protobuf_file/build/CMakeFiles/CMakeTmp'
+Makefile:141: recipe for target 'cmTC_5238e/fast' failed
+make: *** [cmTC_5238e/fast] Error 2
+
+
+
