@@ -27,6 +27,7 @@ public:
     }
 };
 
+
 int main()
 try {
     std::cout << "Example Try blocks\nEnter something:\n";

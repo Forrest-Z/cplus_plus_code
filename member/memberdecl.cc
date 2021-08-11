@@ -1,8 +1,3 @@
-//
-//  Member
-//
-//  Created by Jared Bruni on 7/9/13.
-
 
 #include <iostream>
 

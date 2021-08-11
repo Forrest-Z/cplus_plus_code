@@ -1,6 +1,6 @@
 // old school functions
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 std::string mid(const std::string &src, size_t start, size_t stop) {
     std::string temp;
