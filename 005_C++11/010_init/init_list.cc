@@ -31,8 +31,15 @@ int func(std::initializer_list<int> il){
    return 0;
 }
 
+struct options{
+  std::string str = "hello";
+};
 
 int main(int argc, char **argv) {
+    options opt = options();
+    std::cout<<"opt="<<opt.str<<std::endl;
+
+
     func({1,2,3});    
 
     VectorWrapper<std::string> wrap({"test ", "one", "two", "three"});

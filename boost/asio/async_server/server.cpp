@@ -1,10 +1,10 @@
 
-#include<iostream>
-#include<sstream>
-#include<boost/asio.hpp>
-#include<boost/bind.hpp>
-#include<boost/shared_ptr.hpp>
-#include<boost/enable_shared_from_this.hpp>
+#include <iostream>
+#include <sstream>
+#include <boost/asio.hpp>
+#include <boost/bind.hpp>
+#include <boost/shared_ptr.hpp>
+#include <boost/enable_shared_from_this.hpp>
 using boost::asio::ip::tcp;
 
 std::string make_random_string() {
@@ -13,6 +13,7 @@ std::string make_random_string() {
     return stream.str();
 }
 
+//
 class exConnection : public boost::enable_shared_from_this<exConnection> {
 public:
     
@@ -84,3 +85,5 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+
+

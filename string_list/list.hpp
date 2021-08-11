@@ -1,11 +1,10 @@
-// trying to practice
 #ifndef _STRING_LIST_H_
 #define _STRING_LIST_H_
 
-#include<iostream>
-#include<string>
-#include<unordered_map>
-#include<fstream>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <fstream>
 
 namespace lst {
 

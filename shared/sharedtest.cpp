@@ -12,8 +12,8 @@ public:
         std::cout << "Released: " << temp_text << "\n";
     }
     void lowerCase() {
-        for(int i = 0; i < temp_text.length(); ++i)
-            temp_text[i] = tolower(temp_text[i]);
+        for(int i = 0; i < static_cast<int>(temp_text.length()); ++i)
+            temp_text[i] = tolower(temp_text[i]);  //此处是将大写都改为小写字母
     }
     std::string data() { return temp_text; }
 private:
@@ -40,4 +40,5 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+
 
