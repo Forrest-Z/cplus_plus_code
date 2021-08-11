@@ -1,6 +1,6 @@
-#include<iostream>
-#include<sys/xattr.h>
-#include<cstring>
+#include <iostream>
+#include <sys/xattr.h>
+#include <cstring>
 
 constexpr int LIST_SIZE=10000;
 

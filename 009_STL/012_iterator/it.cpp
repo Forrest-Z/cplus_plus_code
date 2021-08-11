@@ -1,18 +1,10 @@
-/*
- 
- written by Jared Bruni
- http://lostsidedead.com
-
- */
-
-
-#include<iostream>
-#include<vector>
-#include<unordered_map>
-#include<cctype>
-#include<cstdlib>
-#include<string>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <cctype>
+#include <cstdlib>
+#include <string>
+#include <algorithm>
 
 std::string tolower(std::string temp) {
     std::string t;

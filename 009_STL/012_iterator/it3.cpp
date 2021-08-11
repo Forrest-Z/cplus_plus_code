@@ -1,10 +1,6 @@
-/* 
- written by Jared Bruni
- http://lostsidedead.com
-*/
 
-#include<iostream>
-#include<cctype>
+#include <iostream>
+#include <cctype>
 
 template<typename Iter>
 void LowerCase(Iter start, Iter stop) {

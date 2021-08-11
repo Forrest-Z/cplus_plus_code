@@ -1,12 +1,7 @@
 
-/*
- written by Jared Bruni
- http://lostsidedead.com
-*/
-
-#include<iostream>
-#include<vector>
-#include<fstream>
+#include <iostream>
+#include <vector>
+#include <fstream>
 
 template<typename T, typename Iter>
 T addup(Iter start, Iter stop) {

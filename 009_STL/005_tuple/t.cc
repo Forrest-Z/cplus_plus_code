@@ -1,10 +1,3 @@
-/*
- written by Jared Bruni
- http://lostsidedead.com
-*/
-
-
-#include<iostream>
 #include<tuple>
 #include<string>
 #include<sstream>
