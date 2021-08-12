@@ -1,9 +1,7 @@
-// Practice creating a tree.
-// Than moving through the tree and solving the expression
 
-#include<iostream>
-#include<string>
-#include<unordered_map>
+#include <iostream>
+#include <string>
+#include <unordered_map>
 
 struct Symbol {
     double value;

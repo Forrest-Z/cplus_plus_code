@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/public/Project/autoware.ai/utilities/data_preprocessor/build/devel/setup.sh

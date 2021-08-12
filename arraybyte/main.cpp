@@ -1,5 +1,5 @@
-#include<iostream>
-#include"arraybyte.hpp"
+#include <iostream>
+#include "arraybyte.hpp"
 
 template<typename T>
 void printOut(ArrayByte<T> &value) {
